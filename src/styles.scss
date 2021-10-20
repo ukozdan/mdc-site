@@ -1,0 +1,299 @@
+//----------------------------------------
+// Variables
+//----------------------------------------
+
+$base-unit: 4px;
+$facebook: #3b5998;
+$twitter: #1DA1F2;
+$youtube: #FF0000;
+$linkedin: #0072b1;
+$instagram-bg: #e1306c;
+$instagram-bg-grad: "linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d)";
+
+//----------------------------------------
+// @use
+//----------------------------------------
+
+@use "@material/theme" with (
+  $primary: #333333,
+  $secondary: #999999,
+  $on-primary: #ffffff,
+  $on-secondary: #ffffff,
+);
+@use '@material/animation';
+@use '@material/banner/styles';
+@use '@material/button/styles' as b-styles;
+@use '@material/card';
+@use '@material/checkbox';
+@use '@material/form-field';
+@use '@material/chips/styles' as c-styles;
+@use '@material/circular-progress/mdc-circular-progress';
+//@use '@material/checkbox';  // duplicate
+@use '@material/icon-button'; // Data tables: required only for column sorting.
+@use '@material/icon-button/mdc-icon-button';
+@use '@material/data-table/data-table';
+@use '@material/button';
+@use '@material/button/mdc-button';
+@use '@material/dialog';
+@use '@material/drawer';
+@use '@material/list';
+@use '@material/elevation/mdc-elevation';
+@use '@material/fab';
+@use '@material/feature-targeting';
+@use '@material/floating-label/mdc-floating-label';
+//@use '@material/icon-button'; // duplicate
+@use '@material/image-list/mdc-image-list';
+@use '@material/image-list';
+@use '@material/layout-grid/mdc-layout-grid';
+@use '@material/line-ripple/mdc-line-ripple';
+@use '@material/linear-progress';
+//@use '@material/list'; // duplicate
+@use '@material/menu-surface/mdc-menu-surface';
+@use '@material/list/mdc-list';
+//@use '@material/menu-surface/mdc-menu-surface'; // duplicate
+@use '@material/menu/mdc-menu';
+@use '@material/notched-outline/mdc-notched-outline';
+@use '@material/radio/styles' as d-styles;
+//@use '@material/form-field'; // duplicate
+@use '@material/ripple';
+@use '@material/ripple/common';
+@use '@material/segmented-button/styles' as e-styles;
+//@use '@material/list/mdc-list'; // duplicate
+//@use '@material/menu-surface/mdc-menu-surface'; // duplicate
+//@use '@material/menu/mdc-menu'; // duplicate
+@use '@material/select/styles' as f-styles;
+@use '@material/select';
+@use '@material/shape';
+@use '@material/slider/styles' as g-styles;
+@use '@material/snackbar/mdc-snackbar';
+@use '@material/switch/styles' as h-styles;
+@use '@material/tab-bar/mdc-tab-bar';
+@use '@material/tab-scroller/mdc-tab-scroller';
+@use '@material/tab-indicator/mdc-tab-indicator';
+@use '@material/tab/mdc-tab';
+//@use '@material/tab-indicator/mdc-tab-indicator'; // duplicate
+//@use '@material/tab-scroller/mdc-tab-scroller'; // duplicate
+//@use '@material/tab/mdc-tab'; // duplicate
+//@use '@material/floating-label/mdc-floating-label'; // duplicate
+//@use '@material/line-ripple/mdc-line-ripple'; // duplicate
+//@use '@material/notched-outline/mdc-notched-outline'; // duplicate
+@use '@material/textfield';
+@use '@material/tooltip/styles' as i-styles;
+//@use '@material/icon-button'; // duplicate
+@use '@material/top-app-bar/mdc-top-app-bar';
+@use '@material/touch-target/mdc-touch-target';
+@use '@material/typography/mdc-typography';
+
+//----------------------------------------
+// @include
+//----------------------------------------
+
+@include card.core-styles;
+//@include checkbox.core-styles;
+@include form-field.core-styles;
+@include checkbox.core-styles;
+//@include icon-button.core-styles; // Undefined mixin
+@include data-table.core-styles;
+@include data-table.theme-baseline;
+@include dialog.core-styles;
+@include drawer.core-styles;
+@include drawer.dismissible-core-styles;
+@include drawer.modal-core-styles;
+@include list.deprecated-core-styles;
+@include fab.core-styles;
+//@include icon-button.core-styles; // duplicate
+@include linear-progress.core-styles;
+@include list.deprecated-core-styles;
+@include form-field.core-styles;
+@include textfield.core-styles;
+//@include icon-button.core-styles; // duplicate
+
+//----------------------------------------
+// @import
+//----------------------------------------
+
+@import "normalize-scss/sass/normalize";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap";
+//@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.5.0/css/all.css";
+
+//----------------------------------------
+// Custom
+//----------------------------------------
+
+* {letter-spacing: initial;}
+
+body {
+    //display: flex; 
+    //height: 100vh; 
+    padding: 0;
+    margin: 0;
+    font-family: "Source Sans Pro", sans-serif;
+    background-color: #f2f1f0;
+}
+
+svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    display: inherit;
+    max-width: 1480px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+// Classes
+
+.mr-1 {margin-right: 1rem;}
+.mr-2 {margin-right: 2rem;}
+.mr-3 {margin-right: 3rem;}
+
+// Drawer
+
+.mdc-drawer {}
+
+.mdc-drawer-app-content {
+  .mdc-top-app-bar {
+    .custom1-top-app-bar__row {}
+    .custom2-top-app-bar__row {}
+    .custom-tab-bar {}
+  }
+  .main-content {}
+}
+
+// Card
+
+.demo-card__primary, .demo-card__secondary {
+  padding: ($base-unit * 4);
+}
+
+// Logo
+
+.main-logo {
+  fill: #333333;
+  stroke-width: 1.3333;
+}
+
+// Top app bar
+
+.mdc-top-app-bar {
+    color: #333;
+    background-color: transparent;
+    
+    .custom1-top-app-bar__row {
+        background-color: #333;
+
+        .mdc-icon-button {
+            i {
+                vertical-align: bottom;
+            }
+        }
+    }
+
+    .custom2-top-app-bar__row {
+        height: ($base-unit * 25);
+        background-color: #fff;
+    }
+}
+
+.mdc-top-app-bar--fixed-adjust {
+    padding: ($base-unit * 57) ($base-unit * 4) ($base-unit * 4);
+}
+
+// Social media icons
+
+.material-icons-fa {
+  width: auto;
+  height: auto;
+  padding: 0;
+  fill: none;
+  border: none;
+  background: transparent;
+  
+  .fa-stack {display:flex;}
+
+  .fa-circle {
+    color: #999999;
+  }
+
+  i:nth-of-type(1) {
+    order: 2;
+    z-index: 200;
+    //color: #fff;
+  }
+
+  i:nth-of-type(2) {
+    order: 1;
+    z-index: 100;
+    //color: #fff;
+  }
+
+  .fa-facebook-f {
+    + i {color: #3b5998;}
+  }
+  .fa-twitter {
+    + i {color: #1DA1F2;}
+  }
+  .fa-youtube {
+    + i {color: #FF0000;}
+  }
+  .fa-linkedin-in {
+    + i {color: #0072b1;}
+  }
+  .fa-instagram {
+    + i {
+          background: $instagram-bg;
+          background: $instagram-bg-grad;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+
+
+// Tab bar
+
+.mdc-tab-bar {background-color: #fff;}
+
+// BREAKPOINT min-width:900px
+
+.mdc-top-app-bar__navigation-icon {
+  display: none;
+}
+
+// BREAKPOINT max-width:900px
+
+@media (max-width: 900px) {
+  .mdc-top-app-bar__navigation-icon {
+    display: block;
+  }
+}
+
+// social media icons
+
+.icon-circle {
+  display: inline-block;
+  position: relative;
+
+  color: #fff;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    transform-origin: center;
+    transform: translate(-20%, -20%) scale(2);
+    border-radius: 50%;
+    z-index: -1;
+    background-color: #333;
+  }
+}
+
