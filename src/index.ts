@@ -47,6 +47,17 @@ document.body.addEventListener('MDCDrawer:closed', () => {
   mainContentEl.querySelector('input, button').focus();
 });
 
+// Menu
+
+const menuEls = Array.from(document.querySelectorAll('.mdc-menu'));
+menuEls.forEach((menuEl) => {
+  const menu = new MDCMenu(menuEl);
+  const dropdownToggle = menuEl.parentElement.querySelector('#menu-button');
+  dropdownToggle.addEventListener('click', () => {
+    menu.open = !menu.open;
+  });
+});
+
 // Tab bar
 
 const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));

@@ -205,6 +205,11 @@ svg {
 
 .avatar-button {
   @include button.ink-color(#ffffff);
+  .mdc-button__icon {
+    width: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+  }
 }
 
 // Social media icons
