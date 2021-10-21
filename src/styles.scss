@@ -8,7 +8,7 @@ $twitter: #1DA1F2;
 $youtube: #FF0000;
 $linkedin: #0072b1;
 $instagram-bg: #e1306c;
-$instagram-bg-grad: "linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d)";
+$instagram-bg-grad: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
 
 //----------------------------------------
 // @use
@@ -89,7 +89,7 @@ $instagram-bg-grad: "linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, 
 //----------------------------------------
 
 @include card.core-styles;
-//@include checkbox.core-styles;
+@include checkbox.core-styles;
 @include form-field.core-styles;
 @include checkbox.core-styles;
 //@include icon-button.core-styles; // Undefined mixin
@@ -115,7 +115,6 @@ $instagram-bg-grad: "linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, 
 @import "normalize-scss/sass/normalize";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 @import "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap";
-//@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.5.0/css/all.css";
 
 //----------------------------------------
@@ -204,6 +203,10 @@ svg {
     padding: ($base-unit * 57) ($base-unit * 4) ($base-unit * 4);
 }
 
+.avatar-button {
+  @include button.ink-color(#ffffff);
+}
+
 // Social media icons
 
 .material-icons-fa {
@@ -217,33 +220,37 @@ svg {
   .fa-stack {display:flex;}
 
   .fa-circle {
-    color: #999999;
+    color: #666666;
   }
 
-  i:nth-of-type(1) {
-    order: 2;
-    z-index: 200;
-    //color: #fff;
-  }
+  i {
+      &:nth-of-type(1) {
+        order: 2;
+        z-index: 200;
+      }
 
-  i:nth-of-type(2) {
-    order: 1;
-    z-index: 100;
-    //color: #fff;
+      &:nth-of-type(2) {
+        order: 1;
+        z-index: 100;
+      }
   }
 
   .fa-facebook-f {
     + i {color: #3b5998;}
   }
+
   .fa-twitter {
     + i {color: #1DA1F2;}
   }
+
   .fa-youtube {
     + i {color: #FF0000;}
   }
+
   .fa-linkedin-in {
     + i {color: #0072b1;}
   }
+  
   .fa-instagram {
     + i {
           background: $instagram-bg;
@@ -254,7 +261,7 @@ svg {
   }
 }
 
-
+.fa-xxs {font-size: .65em;}
 
 // Tab bar
 
