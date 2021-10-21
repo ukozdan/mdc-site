@@ -151,18 +151,60 @@ svg {
 .mr-2 {margin-right: 2rem;}
 .mr-3 {margin-right: 3rem;}
 
-// Drawer
+// Drawer and Top app bar
 
 .mdc-drawer {}
 
-.mdc-drawer-app-content {
-  .mdc-top-app-bar {
-    .custom1-top-app-bar__row {}
-    .custom2-top-app-bar__row {}
-    .custom-tab-bar {}
+.mdc-drawer-app-content {}
+
+.mdc-top-app-bar {
+  color: #333;
+  background-color: transparent;
+
+  .custom1-top-app-bar__row {
+    z-index: 100;
+    background-color: #333;
+
+    .mdc-icon-button {
+      i {
+        vertical-align: bottom;
+        }
+    }
   }
-  .main-content {}
+
+  .custom2-top-app-bar__row {
+    height: ($base-unit * 25);
+    background-color: #fff;
+  }
+
+  .custom-tab-bar {}
 }
+
+.mdc-top-app-bar--fixed-adjust {
+  padding: ($base-unit * 57) ($base-unit * 4) ($base-unit * 4);
+}
+
+.avatar-button {
+  @include button.ink-color(#ffffff);
+
+  .mdc-button__icon {
+    width: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+  }
+}
+
+.mdc-top-app-bar__navigation-icon {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .mdc-top-app-bar__navigation-icon {
+    display: block;
+  }
+}
+
+.main-content {}
 
 // Card
 
@@ -175,41 +217,6 @@ svg {
 .main-logo {
   fill: #333333;
   stroke-width: 1.3333;
-}
-
-// Top app bar
-
-.mdc-top-app-bar {
-    color: #333;
-    background-color: transparent;
-    
-    .custom1-top-app-bar__row {
-        background-color: #333;
-
-        .mdc-icon-button {
-            i {
-                vertical-align: bottom;
-            }
-        }
-    }
-
-    .custom2-top-app-bar__row {
-        height: ($base-unit * 25);
-        background-color: #fff;
-    }
-}
-
-.mdc-top-app-bar--fixed-adjust {
-    padding: ($base-unit * 57) ($base-unit * 4) ($base-unit * 4);
-}
-
-.avatar-button {
-  @include button.ink-color(#ffffff);
-  .mdc-button__icon {
-    width: 2rem;
-    height: 2rem;
-    font-size: 2rem;
-  }
 }
 
 // Social media icons
@@ -272,40 +279,7 @@ svg {
 
 .mdc-tab-bar {background-color: #fff;}
 
-// BREAKPOINT min-width:900px
 
-.mdc-top-app-bar__navigation-icon {
-  display: none;
-}
 
-// BREAKPOINT max-width:900px
 
-@media (max-width: 900px) {
-  .mdc-top-app-bar__navigation-icon {
-    display: block;
-  }
-}
-
-// social media icons
-
-.icon-circle {
-  display: inline-block;
-  position: relative;
-
-  color: #fff;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1em;
-    height: 1em;
-    transform-origin: center;
-    transform: translate(-20%, -20%) scale(2);
-    border-radius: 50%;
-    z-index: -1;
-    background-color: #333;
-  }
-}
 
