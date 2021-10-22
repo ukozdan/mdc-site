@@ -92,7 +92,7 @@ $instagram-bg-grad: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #
 @include checkbox.core-styles;
 @include form-field.core-styles;
 @include checkbox.core-styles;
-//@include icon-button.core-styles; // Undefined mixin
+@include icon-button.core-styles; // Undefined mixin
 @include data-table.core-styles;
 @include data-table.theme-baseline;
 @include dialog.core-styles;

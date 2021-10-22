@@ -1,7 +1,7 @@
 {
-  "name": "mdc-site-bo0d9",
+  "name": "mdc-site",
   "version": "1.0.0",
-  "description": "",
+  "description": "Importing in all MDC packages individually, rather than the single library. ",
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
