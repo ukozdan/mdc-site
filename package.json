@@ -71,5 +71,10 @@
   "resolutions": {
     "@babel/preset-env": "7.13.8"
   },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ],
   "keywords": []
 }

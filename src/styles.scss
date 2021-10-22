@@ -120,6 +120,8 @@ $instagram-bg-grad: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
 @import "bootstrap/scss/utilities";
 @import "bootstrap/scss/helpers";
 @import "bootstrap/scss/utilities/api";
