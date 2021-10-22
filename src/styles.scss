@@ -162,6 +162,7 @@ svg {
   background-color: transparent;
 
   .custom1-top-app-bar__row {
+    height: ($base-unit * 11);
     z-index: 100;
     background-color: #333;
 
@@ -181,16 +182,16 @@ svg {
 }
 
 .mdc-top-app-bar--fixed-adjust {
-  padding: ($base-unit * 57) ($base-unit * 4) ($base-unit * 4);
+  padding: ($base-unit * 56) ($base-unit * 6) ($base-unit * 6);
 }
 
 .avatar-button {
   @include button.ink-color(#ffffff);
 
   .mdc-button__icon {
-    width: 2rem;
-    height: 2rem;
-    font-size: 2rem;
+    width: ($base-unit * 8);
+    height: ($base-unit * 8);
+    font-size: ($base-unit * 8);
   }
 }
 
@@ -209,14 +210,13 @@ svg {
 // Card
 
 .demo-card__primary, .demo-card__secondary {
-  padding: ($base-unit * 4);
+  padding: ($base-unit * 6);
 }
 
 // Logo
 
 .main-logo {
   fill: #333333;
-  stroke-width: 1.3333;
 }
 
 // Social media icons
@@ -273,13 +273,13 @@ svg {
   }
 }
 
-.fa-xxs {font-size: .65em;}
+.fa-xxs {font-size: .6em;}
 
 // Tab bar
 
 .mdc-tab-bar {background-color: #fff;}
 
+.mdc-tab-scroller__scroll-content {/*flex: 0;*/}
 
-
-
+.mdc-tab-scroller__scroll-area--scroll {overflow-x: hidden;}
 
