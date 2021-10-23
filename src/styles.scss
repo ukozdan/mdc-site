@@ -3,6 +3,11 @@
 //----------------------------------------
 
 $base-unit: 4px;
+
+$phone: 0px;
+$tablet: 600px;
+$desktop: 840px;
+
 $facebook: #3b5998;
 $twitter: #1DA1F2;
 $youtube: #FF0000;
@@ -121,6 +126,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: "Source Sans Pro", sans-serif;
+    // mobile width: 375px
 }
 
 svg {
@@ -135,6 +141,11 @@ svg {
     margin: 0 auto;
     width: 100%;
 }
+
+// Classes
+//--------------------------------------------------
+
+.mw-0 {min-width: 0 !important;}
 
 // Drawer and Top app bar
 //--------------------------------------------------
@@ -250,6 +261,18 @@ svg {
 
 .mdc-tab-scroller__scroll-area--scroll {overflow-x: hidden;}
 
-// 
+// Avatar menu
 //--------------------------------------------------
+
+@media (min-width: $phone) {
+  //.product-logo {font-size: 4vw;}
+}
+
+@media (min-width: $tablet) {
+  //.product-logo {font-size: 4vw;}
+}
+
+@media (min-width: $desktop) {
+  //.product-logo {font-size: 4vw;}
+}
 
