@@ -58,6 +58,7 @@
     "@material/touch-target": "13.0.0",
     "@material/typography": "13.0.0",
     "bootstrap": "5.1.3",
+    "node-sass": "6.0.1",
     "normalize-scss": "7.0.1",
     "parcel-bundler": "1.12.5",
     "typescript": "3.4.3"
@@ -68,6 +69,10 @@
   "resolutions": {
     "@babel/preset-env": "7.13.8"
   },
-  "browserslist": ["defaults", "not IE 11", "maintained node versions"],
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ],
   "keywords": []
 }

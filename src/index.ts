@@ -34,7 +34,7 @@ import { MDCTab } from '@material/tab';
 import { MDCTextField } from '@material/textfield';
 import { MDCTooltip } from '@material/tooltip';
 import { MDCTopAppBar } from '@material/top-app-bar';
-import './styles.scss';
+import './scss/styles.scss';
 
 //----------------------------------------
 // instantiation
