@@ -151,8 +151,8 @@ svg {
 
 .fa-xxs {font-size: ($base-unit * 3.5);}
 
-.shadow-inset-sm {
-  box-shadow: inset 0 ($base-unit / 2) $base-unit #00000013 !important;
+.shadow-up-sm {
+  box-shadow: 0 ($base-unit / 2) -$base-unit #00000013 !important;
 }
 
 // Drawer and Top app bar
@@ -283,14 +283,21 @@ svg {
 //--------------------------------------------------
 
 @media (min-width: $phone) {
-  //.product-logo {font-size: 4vw;}
+  .product-logo {
+    font-size: 4vw;
+    line-height: ($base-unit * 6);
+  }
 }
 
 @media (min-width: $tablet) {
-  //.product-logo {font-size: 4vw;}
+  .product-logo {font-size: ($base-unit * 6);}
 }
 
 @media (min-width: $desktop) {
-  //.product-logo {font-size: 4vw;}
+  .product-logo {font-size: ($base-unit * 6);}
 }
 
+// 
+//--------------------------------------------------
+
+#menu-button {text-transform: capitalize;}
