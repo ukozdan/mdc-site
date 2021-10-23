@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   </head>
 
-  <body>
+  <body class="bg-light">
     <aside class="mdc-drawer mdc-drawer--modal">
       <div class="mdc-drawer__header">
         <!--<h3 class="mdc-drawer__title">Mail</h3>
@@ -47,8 +47,11 @@
     <div class="mdc-drawer-scrim"></div>
 
     <div class="mdc-drawer-app-content">
-      <header class="mdc-top-app-bar app-bar" id="app-bar">
-        <div class="mdc-top-app-bar__row custom1-top-app-bar__row">
+      <header
+        class="mdc-top-app-bar app-bar bg-transparent text-dark shadow-sm"
+        id="app-bar"
+      >
+        <div class="mdc-top-app-bar__row custom1-top-app-bar__row bg-dark">
           <div class="container">
             <section
               class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
@@ -141,13 +144,14 @@
                   <button
                     id="menu-button"
                     class="mdc-button mdc-button--icon-leading avatar-button w-75"
+                    title="User name text"
                   >
                     <span class="mdc-button__ripple"></span>
                     <i class="material-icons mdc-button__icon" aria-hidden="true"
                       >account_circle</i
                     >
                     <span class="mdc-button__label d-inline-block text-truncate"
-                      >User name</span
+                      >User name text</span
                     >
                   </button>
                 </div>
@@ -192,26 +196,22 @@
             </section>
           </div>
         </div>
-        <div class="mdc-top-app-bar__row custom2-top-app-bar__row">
+        <div class="mdc-top-app-bar__row custom2-top-app-bar__row bg-white">
           <div class="container">
             <section
-              class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start flex-shrink-1"
+              class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start flex-shrink-1 p-4"
             >
-              <span class="mdc-top-app-bar__title">
+              <span class="mdc-top-app-bar__title ps-0">
                 <a href="">
                   <img src="./src/images/logo.svg" class="img-fluid" />
                 </a>
               </span>
-              <!--<hr
-                class="mdc-divider-root mdc-divider-flexItem mdc-divider-vertical"
-              />
-              <p class="mb-0 mdc-typography--headline6 brand-logo">
-                Results Service for Candidates
-              </p>-->
             </section>
 
-            <section class="mdc-top-app-bar__section d-flex align-items-center w-100">
-              <p class="mb-0 mt-0 ms-3 mdc-typography--headline5 brand-logo">
+            <section
+              class="mdc-top-app-bar__section d-flex align-items-center w-100 p-4 ps-0"
+            >
+              <p class="mb-0 mt-0 mdc-typography--headline5 brand-logo">
                 Product Title Text
               </p>
             </section>
@@ -242,7 +242,7 @@
             </section>-->
           </div>
         </div>
-        <div class="mdc-tab-bar custom-tab-bar" role="tablist">
+        <div class="mdc-tab-bar custom-tab-bar bg-white" role="tablist">
           <div class="mdc-tab-scroller">
             <div class="mdc-tab-scroller__scroll-area">
               <div class="mdc-tab-scroller__scroll-content">
@@ -287,7 +287,7 @@
               style="width: 0; height: 0; position: absolute; left: -999999px;"
             ></button>
             <div class="mdc-card demo-card demo-basic-with-header">
-              <div class="demo-card__primary">
+              <div class="demo-card__primary p-4">
                 <h2 class="demo-card__title mdc-typography mdc-typography--headline6">
                   Our Changing Planet
                 </h2>
@@ -303,14 +303,16 @@
                   class="mdc-card__media mdc-card__media--16-9 demo-card__media"
                   style="background-image: url('https://picsum.photos/id/1002/1880/806');"
                 ></div>
-                <div class="demo-card__secondary mdc-typography mdc-typography--body2">
+                <div
+                  class="demo-card__secondary mdc-typography mdc-typography--body2 p-4"
+                >
                   <p>
                     Visit ten places on our planet that are undergoing the biggest changes
                     today.
                   </p>
                 </div>
               </div>
-              <div class="mdc-card__actions">
+              <div class="mdc-card__actions p-4">
                 <div class="mdc-card__action-buttons">
                   <button class="mdc-button mdc-card__action mdc-card__action--button">
                     <span class="mdc-button__ripple"></span> Read
@@ -353,7 +355,7 @@
         </div>
       </main>
 
-      <footer class="main-footer p-4 bg-white" id="main-footer">
+      <footer class="main-footer p-4 bg-white shadow-sm" id="main-footer">
         <div class="container">
           <ul class="mdc-deprecated-list">
             <li class="mdc-deprecated-list-item" tabindex="0">

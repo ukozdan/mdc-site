@@ -1,3 +1,7 @@
+//----------------------------------------
+// import
+//----------------------------------------
+
 import { mdcAutoInit } from '@material/auto-init';
 import { MDCBanner } from '@material/banner';
 import { MDCComponent, MDCFoundation } from '@material/base';
@@ -32,7 +36,12 @@ import { MDCTooltip } from '@material/tooltip';
 import { MDCTopAppBar } from '@material/top-app-bar';
 import './styles.scss';
 
+//----------------------------------------
+// instantiation
+//----------------------------------------
+
 // Drawer
+//----------------------------------------
 
 const drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
 
@@ -48,6 +57,7 @@ document.body.addEventListener('MDCDrawer:closed', () => {
 });
 
 // Menu
+//----------------------------------------
 
 const menuEls = Array.from(document.querySelectorAll('.mdc-menu'));
 menuEls.forEach((menuEl) => {
@@ -59,10 +69,12 @@ menuEls.forEach((menuEl) => {
 });
 
 // Tab bar
+//----------------------------------------
 
 const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
 
 // Top app bar
+//----------------------------------------
 
 const topAppBar = MDCTopAppBar.attachTo(document.getElementById('app-bar'));
 topAppBar.setScrollTarget(document.getElementById('main-content'));
@@ -71,16 +83,18 @@ topAppBar.listen('MDCTopAppBar:nav', () => {
 });
 
 // Ripple
+//----------------------------------------
 
 const selector = '.mdc-button, .mdc-icon-button, .mdc-card__primary-action';
 const ripples = [].map.call(document.querySelectorAll(selector), function (el) {
   return new MDCRipple(el);
 });
-/*const iconButtonRipple = new MDCRipple(
-  document.querySelector('.mdc-icon-button')
-);*/
 ripples.unbounded = true;
 
 // List
+//----------------------------------------
 
 const list = new MDCList(document.querySelector('.mdc-deprecated-list'));
+
+//
+//----------------------------------------
