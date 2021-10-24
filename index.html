@@ -21,21 +21,27 @@
             tabindex="0"
           >
             <span class="mdc-deprecated-list-item__ripple"></span>
-            <i class="material-icons mdc-deprecated-list-item__graphic" aria-hidden="true"
+            <i
+              class="material-icons mdc-deprecated-list-item__graphic"
+              aria-hidden="true"
               >chevron_right</i
             >
             <span class="mdc-deprecated-list-item__text">Text link 1</span>
           </a>
           <a class="mdc-deprecated-list-item" href="#">
             <span class="mdc-deprecated-list-item__ripple"></span>
-            <i class="material-icons mdc-deprecated-list-item__graphic" aria-hidden="true"
+            <i
+              class="material-icons mdc-deprecated-list-item__graphic"
+              aria-hidden="true"
               >chevron_right</i
             >
             <span class="mdc-deprecated-list-item__text">Text link 2</span>
           </a>
           <a class="mdc-deprecated-list-item" href="#">
             <span class="mdc-deprecated-list-item__ripple"></span>
-            <i class="material-icons mdc-deprecated-list-item__graphic" aria-hidden="true"
+            <i
+              class="material-icons mdc-deprecated-list-item__graphic"
+              aria-hidden="true"
               >chevron_right</i
             >
             <span class="mdc-deprecated-list-item__text">Text link 3</span>
@@ -147,7 +153,9 @@
                     title="User name text"
                   >
                     <span class="mdc-button__ripple"></span>
-                    <i class="material-icons mdc-button__icon" aria-hidden="true"
+                    <i
+                      class="material-icons mdc-button__icon"
+                      aria-hidden="true"
                       >account_circle</i
                     >
                     <span class="mdc-button__label d-inline-block text-truncate"
@@ -170,7 +178,9 @@
                         aria-hidden="true"
                         >logout</span
                       >
-                      <span class="mdc-deprecated-list-item__text">Log out</span>
+                      <span class="mdc-deprecated-list-item__text"
+                        >Log out</span
+                      >
                     </li>
                   </ul>
                 </div>
@@ -247,9 +257,15 @@
             <div class="mdc-tab-scroller">
               <div class="mdc-tab-scroller__scroll-area">
                 <div class="mdc-tab-scroller__scroll-content">
-                  <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true">
+                  <button
+                    class="mdc-tab mdc-tab--active"
+                    role="tab"
+                    aria-selected="true"
+                  >
                     <span class="mdc-tab__content"
-                      ><span class="mdc-tab__text-label">Text link 1</span></span
+                      ><span class="mdc-tab__text-label"
+                        >Text link 1</span
+                      ></span
                     ><span class="mdc-tab-indicator mdc-tab-indicator--active"
                       ><span
                         class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
@@ -258,7 +274,9 @@
                   </button>
                   <button class="mdc-tab" role="tab" aria-selected="false">
                     <span class="mdc-tab__content"
-                      ><span class="mdc-tab__text-label">Text link 2</span></span
+                      ><span class="mdc-tab__text-label"
+                        >Text link 2</span
+                      ></span
                     ><span class="mdc-tab-indicator"
                       ><span
                         class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
@@ -267,7 +285,9 @@
                   </button>
                   <button class="mdc-tab" role="tab" aria-selected="false">
                     <span class="mdc-tab__content"
-                      ><span class="mdc-tab__text-label">Text link 3</span></span
+                      ><span class="mdc-tab__text-label"
+                        >Text link 3</span
+                      ></span
                     ><span class="mdc-tab-indicator"
                       ><span
                         class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
@@ -284,10 +304,42 @@
       <main class="main-content" id="main-content">
         <div class="container">
           <div class="mdc-top-app-bar--fixed-adjust">
-            <button
+            <!--<button
               tabindex="0"
-              style="width: 0; height: 0; position: absolute; left: -999999px;"
-            ></button>
+              class="sr-only"
+            ></button>-->
+            <div class="hero-banner mb-4">
+              <div class="container bg-white">
+                <div class="mdc-layout-grid p-0 ms-auto me-0 hero-banner-grid">
+                  <div class="mdc-layout-grid__inner">
+                    <div
+                      class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-8-desktop p-4 d-flex align-items-center"
+                    >
+                      <div>
+                        <h1 class="mdc-typography mdc-typography--headline4">
+                          Lorem ipsum dolor sit amet consectetur adipiscing
+                        </h1>
+                        <h2 class="mdc-typography mdc-typography--headline6">
+                          Suspendisse rutrum sodales tincidunt. Vivamus non
+                          scelerisque sem. Donec vel augue sed libero mollis
+                          suscipit id at quam. Phasellus maximus tincidunt
+                          vestibulum. Suspendisse posuere elit vitae mauris
+                          porttitor fermentum.
+                        </h2>
+                      </div>
+                    </div>
+                    <div
+                      class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-4-desktop ms-auto"
+                    >
+                      <img
+                        class="img-fluid"
+                        src="https://via.placeholder.com/400x400"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="mdc-card">
               <div class="mdc-layout-grid w-100">
                 <div class="mdc-layout-grid__inner">
@@ -304,19 +356,23 @@
                       <div class="mdc-card-wrapper__text-section">
                         <div class="pt-4 pe-4 pb-0 ps-4">
                           <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Curabitur in est ultricies nibh pellentesque lacinia non nec
-                            mauris. Vivamus ac est id lorem rhoncus ultrices. Praesent
-                            fermentum semper felis et auctor.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Curabitur in est ultricies nibh pellentesque
+                            lacinia non nec mauris. Vivamus ac est id lorem
+                            rhoncus ultrices. Praesent fermentum semper felis et
+                            auctor.
                           </p>
                         </div>
                       </div>
                       <div class="mdc-card__actions p-4">
                         <button
+                          tabindex="0"
                           class="mdc-button mdc-button--unelevated mdc-card__action mdc-card__action--button mdc-button--icon-trailing"
                         >
                           <span class="mdc-button__label">Action</span>
-                          <i class="material-icons mdc-button__icon" aria-hidden="true"
+                          <i
+                            class="material-icons mdc-button__icon"
+                            aria-hidden="true"
                             >arrow_forward_ios</i
                           >
                           <div class="mdc-button__ripple"></div>
@@ -337,10 +393,11 @@
                       <div class="mdc-card-wrapper__text-section">
                         <div class="pt-4 pe-4 pb-0 ps-4">
                           <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Curabitur in est ultricies nibh pellentesque lacinia non nec
-                            mauris. Vivamus ac est id lorem rhoncus ultrices. Praesent
-                            fermentum semper felis et auctor.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Curabitur in est ultricies nibh pellentesque
+                            lacinia non nec mauris. Vivamus ac est id lorem
+                            rhoncus ultrices. Praesent fermentum semper felis et
+                            auctor.
                           </p>
                         </div>
                       </div>
@@ -349,7 +406,9 @@
                           class="mdc-button mdc-button--unelevated mdc-card__action mdc-card__action--button mdc-button--icon-trailing"
                         >
                           <span class="mdc-button__label">Action</span>
-                          <i class="material-icons mdc-button__icon" aria-hidden="true"
+                          <i
+                            class="material-icons mdc-button__icon"
+                            aria-hidden="true"
                             >arrow_forward_ios</i
                           >
                           <div class="mdc-button__ripple"></div>
@@ -374,15 +433,21 @@
                 <ul class="mdc-deprecated-list">
                   <li class="mdc-deprecated-list-item" tabindex="0">
                     <span class="mdc-deprecated-list-item__ripple"></span>
-                    <span class="mdc-deprecated-list-item__text">Text link 1</span>
+                    <span class="mdc-deprecated-list-item__text"
+                      >Text link 1</span
+                    >
                   </li>
                   <li class="mdc-deprecated-list-item">
                     <span class="mdc-deprecated-list-item__ripple"></span>
-                    <span class="mdc-deprecated-list-item__text">Text link 2</span>
+                    <span class="mdc-deprecated-list-item__text"
+                      >Text link 2</span
+                    >
                   </li>
                   <li class="mdc-deprecated-list-item">
                     <span class="mdc-deprecated-list-item__ripple"></span>
-                    <span class="mdc-deprecated-list-item__text">Text link 3</span>
+                    <span class="mdc-deprecated-list-item__text"
+                      >Text link 3</span
+                    >
                   </li>
                 </ul>
               </div>
@@ -392,15 +457,21 @@
                 <ul class="mdc-deprecated-list">
                   <li class="mdc-deprecated-list-item" tabindex="0">
                     <span class="mdc-deprecated-list-item__ripple"></span>
-                    <span class="mdc-deprecated-list-item__text">Text link 1</span>
+                    <span class="mdc-deprecated-list-item__text"
+                      >Text link 1</span
+                    >
                   </li>
                   <li class="mdc-deprecated-list-item">
                     <span class="mdc-deprecated-list-item__ripple"></span>
-                    <span class="mdc-deprecated-list-item__text">Text link 2</span>
+                    <span class="mdc-deprecated-list-item__text"
+                      >Text link 2</span
+                    >
                   </li>
                   <li class="mdc-deprecated-list-item">
                     <span class="mdc-deprecated-list-item__ripple"></span>
-                    <span class="mdc-deprecated-list-item__text">Text link 3</span>
+                    <span class="mdc-deprecated-list-item__text"
+                      >Text link 3</span
+                    >
                   </li>
                 </ul>
               </div>

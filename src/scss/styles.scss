@@ -155,6 +155,18 @@ svg {
   box-shadow: 0 ($base-unit / 2) -$base-unit #00000013 !important;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
 // Drawer and Top app bar
 //--------------------------------------------------
 
@@ -192,6 +204,8 @@ svg {
     padding-top: ($base-unit * 42);
   }
 }
+
+#menu-button {text-transform: capitalize;}
 
 .avatar-button {
   @include button.ink-color(#ffffff);
@@ -297,7 +311,9 @@ svg {
   .product-logo {font-size: ($base-unit * 6);}
 }
 
-// 
+// Hero banner
 //--------------------------------------------------
 
-#menu-button {text-transform: capitalize;}
+.hero-banner-grid {
+  max-width: ($base-unit * 320);
+}
