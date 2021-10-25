@@ -178,6 +178,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
+  font-size: ($base-unit * 4);
+  line-height: ($base-unit * 5);
   // mobile width: 375px approx
 }
 
@@ -195,10 +197,10 @@ svg {
 .fa-xxs {font-size: ($base-unit * 3.5);}
 
 .shadow-up-sm {
-  box-shadow: 0 ($base-unit / 2) -$base-unit #00000013 !important;
+  box-shadow: 0 (-($base-unit / 2)) $base-unit #00000013 !important;
 }
 
-.sr-only {
+.screen-reader-text {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -239,7 +241,7 @@ svg {
 }
 
 .mdc-top-app-bar {
-  .custom1-top-app-bar__row {
+  .global-sub-header {
     height: ($base-unit * 11);
     z-index: 100;
 
@@ -250,7 +252,7 @@ svg {
     }
   }
 
-  .custom2-top-app-bar__row {
+  .branding-sub-header {
     height: ($base-unit * 25);
   }
 
