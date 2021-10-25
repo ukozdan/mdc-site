@@ -313,7 +313,7 @@
                 <div class="mdc-layout-grid p-0 ms-auto me-0 hero-banner-grid">
                   <div class="mdc-layout-grid__inner">
                     <div
-                      class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-8-desktop p-4 d-flex align-items-center"
+                      class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-8-desktop p-4 d-flex align-items-center order-2 order-md-1"
                     >
                       <div>
                         <h1 class="mdc-typography mdc-typography--headline4">
@@ -329,90 +329,105 @@
                       </div>
                     </div>
                     <div
-                      class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-4-desktop ms-auto"
+                      class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-4-desktop ms-auto order-1 order-md-2"
                     >
-                      <img
-                        class="img-fluid"
-                        src="https://via.placeholder.com/400x400"
-                      />
+                      <picture>
+                        <source
+                          srcset="https://via.placeholder.com/400x400"
+                          media="(min-width: 840px)"
+                          class="d-block img-fluid"
+                        />
+                        <source
+                          srcset="https://via.placeholder.com/823x353"
+                          media="(min-width: 600px)"
+                          class="d-block img-fluid"
+                        />
+                        <img
+                          src="https://via.placeholder.com/570x244"
+                          class="d-block img-fluid"
+                          alt="Placeholder image"
+                        />
+                      </picture>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mdc-card">
-              <div class="mdc-layout-grid w-100">
-                <div class="mdc-layout-grid__inner">
-                  <div
-                    class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-6-desktop"
-                  >
-                    <div class="mdc-card mdc-card--outlined border-0">
-                      <div class="mdc-card__media">
-                        <img
-                          class="img-fluid"
-                          src="https://via.placeholder.com/1440x617"
-                        />
-                      </div>
-                      <div class="mdc-card-wrapper__text-section">
-                        <div class="pt-4 pe-4 pb-0 ps-4">
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Curabitur in est ultricies nibh pellentesque
-                            lacinia non nec mauris. Vivamus ac est id lorem
-                            rhoncus ultrices. Praesent fermentum semper felis et
-                            auctor.
-                          </p>
+            <div class="container-content">
+              <div class="mdc-card">
+                <div class="mdc-layout-grid w-100">
+                  <div class="mdc-layout-grid__inner">
+                    <div
+                      class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-6-desktop"
+                    >
+                      <div class="mdc-card mdc-card--outlined border-0">
+                        <div class="mdc-card__media">
+                          <img
+                            class="img-fluid"
+                            src="https://via.placeholder.com/1440x617"
+                          />
                         </div>
-                      </div>
-                      <div class="mdc-card__actions p-4">
-                        <button
-                          tabindex="0"
-                          class="mdc-button mdc-button--unelevated mdc-card__action mdc-card__action--button mdc-button--icon-trailing"
-                        >
-                          <span class="mdc-button__label">Action</span>
-                          <i
-                            class="material-icons mdc-button__icon"
-                            aria-hidden="true"
-                            >arrow_forward_ios</i
+                        <div class="mdc-card-wrapper__text-section">
+                          <div class="pt-4 pe-4 pb-0 ps-4">
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit. Curabitur in est ultricies nibh pellentesque
+                              lacinia non nec mauris. Vivamus ac est id lorem
+                              rhoncus ultrices. Praesent fermentum semper felis
+                              et auctor.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="mdc-card__actions p-4">
+                          <button
+                            tabindex="0"
+                            class="mdc-button mdc-button--unelevated mdc-card__action mdc-card__action--button mdc-button--icon-trailing"
                           >
-                          <div class="mdc-button__ripple"></div>
-                        </button>
+                            <span class="mdc-button__label">Action</span>
+                            <i
+                              class="material-icons mdc-button__icon"
+                              aria-hidden="true"
+                              >arrow_forward_ios</i
+                            >
+                            <div class="mdc-button__ripple"></div>
+                          </button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-6-desktop"
-                  >
-                    <div class="mdc-card mdc-card--outlined border-0">
-                      <div class="mdc-card__media">
-                        <img
-                          class="img-fluid"
-                          src="https://via.placeholder.com/1440x617"
-                        />
-                      </div>
-                      <div class="mdc-card-wrapper__text-section">
-                        <div class="pt-4 pe-4 pb-0 ps-4">
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Curabitur in est ultricies nibh pellentesque
-                            lacinia non nec mauris. Vivamus ac est id lorem
-                            rhoncus ultrices. Praesent fermentum semper felis et
-                            auctor.
-                          </p>
+                    <div
+                      class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-6-desktop"
+                    >
+                      <div class="mdc-card mdc-card--outlined border-0">
+                        <div class="mdc-card__media">
+                          <img
+                            class="img-fluid"
+                            src="https://via.placeholder.com/1440x617"
+                          />
                         </div>
-                      </div>
-                      <div class="mdc-card__actions p-4">
-                        <button
-                          class="mdc-button mdc-button--unelevated mdc-card__action mdc-card__action--button mdc-button--icon-trailing"
-                        >
-                          <span class="mdc-button__label">Action</span>
-                          <i
-                            class="material-icons mdc-button__icon"
-                            aria-hidden="true"
-                            >arrow_forward_ios</i
+                        <div class="mdc-card-wrapper__text-section">
+                          <div class="pt-4 pe-4 pb-0 ps-4">
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit. Curabitur in est ultricies nibh pellentesque
+                              lacinia non nec mauris. Vivamus ac est id lorem
+                              rhoncus ultrices. Praesent fermentum semper felis
+                              et auctor.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="mdc-card__actions p-4">
+                          <button
+                            class="mdc-button mdc-button--unelevated mdc-card__action mdc-card__action--button mdc-button--icon-trailing"
                           >
-                          <div class="mdc-button__ripple"></div>
-                        </button>
+                            <span class="mdc-button__label">Action</span>
+                            <i
+                              class="material-icons mdc-button__icon"
+                              aria-hidden="true"
+                              >arrow_forward_ios</i
+                            >
+                            <div class="mdc-button__ripple"></div>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
