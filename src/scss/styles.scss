@@ -339,6 +339,7 @@ svg {
         background: $instagram-bg;
         background: $instagram-bg-grad;
         background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
   }
