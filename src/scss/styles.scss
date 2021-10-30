@@ -252,11 +252,23 @@ svg {
     }
   }
 
+  // https://codepen.io/abhiomkar/pen/QBEyGX
+  /*.global-sub-header-drawer {
+    height: ($base-unit * 11);
+    transform: translateY(0); 
+    transition: transform 225ms ease-in-out;
+
+    &.is-hidden {
+      transform: translateY(-($base-unit * 11)); 
+      transition: transform 225ms ease-in-out;
+    }
+  }*/
+
   .branding-sub-header {
     height: ($base-unit * 25);
   }
 
-  .custom-tab-bar {}
+  .primary-nav-tab-bar {}
 }
 
 .mdc-top-app-bar--fixed-adjust {
@@ -348,7 +360,7 @@ svg {
 // Tab bar
 //--------------------------------------------------
 
-.custom-tab-bar {
+.primary-nav-tab-bar {
   @media (max-width: $desktop) {
     display: none;
   }

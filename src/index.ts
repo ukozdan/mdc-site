@@ -98,3 +98,13 @@ const list = new MDCList(document.querySelector('.mdc-deprecated-list'));
 
 //
 //----------------------------------------
+/*
+var appBarEl = document.querySelector('.global-sub-header-drawer');
+var appBar = MDCTopAppBar.attachTo(appBarEl);
+
+var toggleButton = document.querySelector('.link-drawer-button');
+
+toggleButton.addEventListener('click', function () {
+  appBarEl.classList.toggle('is-hidden');
+});
+*/
