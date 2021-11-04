@@ -34,6 +34,7 @@ import { MDCTab } from '@material/tab';
 import { MDCTextField } from '@material/textfield';
 import { MDCTooltip } from '@material/tooltip';
 import { MDCTopAppBar } from '@material/top-app-bar';
+import { MDCIconButtonToggle } from '@material/icon-button';
 import './scss/styles.scss';
 
 //----------------------------------------
@@ -98,13 +99,14 @@ const list = new MDCList(document.querySelector('.mdc-deprecated-list'));
 
 //
 //----------------------------------------
-/*
-var appBarEl = document.querySelector('.global-sub-header-drawer');
-var appBar = MDCTopAppBar.attachTo(appBarEl);
 
-var toggleButton = document.querySelector('.link-drawer-button');
+const appBarEl = document.querySelector('.global-sub-header-drawer');
+const appBar = MDCTopAppBar.attachTo(appBarEl);
+const toggleButton = document.querySelector('.link-drawer-button');
+const iconToggle = new MDCIconButtonToggle(
+  document.querySelector('.link-drawer-button')
+);
 
 toggleButton.addEventListener('click', function () {
-  appBarEl.classList.toggle('is-hidden');
+  appBarEl.classList.toggle('is-shown');
 });
-*/

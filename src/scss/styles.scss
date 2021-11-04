@@ -21,9 +21,13 @@ $instagram-bg-grad: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #
 
 @use "@material/theme" with (
   $primary: #333333,
+  $on-primary: #FFFFFF,
   $secondary: #999999,
-  $on-primary: #ffffff,
-  $on-secondary: #ffffff,
+  $on-secondary: #FFFFFF,
+  $surface: #FFFFFF,
+  $on-surface: #212529,
+  $background: #f2f1f0,
+  //$on-background: #000000,
 );
 @use '@material/animation';
 @use '@material/banner/styles';
@@ -235,9 +239,9 @@ svg {
 .mdc-drawer {}
 
 .mdc-drawer-app-content {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+  //display: flex;
+  //flex-direction: column;
+  //height: 100vh;
 }
 
 .mdc-top-app-bar {
@@ -252,17 +256,27 @@ svg {
     }
   }
 
-  // https://codepen.io/abhiomkar/pen/QBEyGX
-  /*.global-sub-header-drawer {
-    height: ($base-unit * 11);
-    transform: translateY(0); 
-    transition: transform 225ms ease-in-out;
+  .global-sub-header-drawer {
+    top: 0 !important;
+    //height: ($base-unit * 40);
+    height: 0;
+    z-index: 90;
+    //transform: translateY(-($base-unit * 40)); 
+    //transition: transform 225ms ease-in-out;
+    transition: height 500ms ease;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
 
-    &.is-hidden {
-      transform: translateY(-($base-unit * 11)); 
-      transition: transform 225ms ease-in-out;
+    &.is-shown {
+      //transform: translateY($base-unit * 40); 
+      //transition: transform 225ms ease-in-out;
+      height: ($base-unit * 42);
     }
-  }*/
+
+    .mdc-layout-grid__inner {
+      grid-row-gap: 0;
+    }
+  }
 
   .branding-sub-header {
     height: ($base-unit * 25);
@@ -272,17 +286,18 @@ svg {
 }
 
 .mdc-top-app-bar--fixed-adjust {
-  padding: ($base-unit * 54) ($base-unit * 6) ($base-unit * 6);
+  //padding: ($base-unit * 54) ($base-unit * 6) ($base-unit * 6);
+  padding: ($base-unit * 6) ($base-unit * 6) ($base-unit * 12);
 
-  @media (max-width: $desktop) {
+  /*@media (max-width: $desktop) {
     padding-top: ($base-unit * 42);
-  }
+  }*/
 }
 
 #menu-button {text-transform: capitalize;}
 
 .avatar-button {
-  @include button.ink-color(#ffffff);
+  //@include button.ink-color(#ffffff);
 
   .mdc-button__icon {
     width: ($base-unit * 8);
