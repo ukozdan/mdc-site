@@ -262,7 +262,7 @@ svg {
     scroll-behavior: smooth;
 
     &.is-shown {
-      height: auto;
+      //height: auto;
       max-height: ($base-unit * 192);
     }
 
