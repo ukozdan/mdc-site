@@ -37,7 +37,7 @@ $instagram-bg-grad: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #
 @use '@material/form-field';
 @use '@material/chips/styles' as c-styles;
 @use '@material/circular-progress/mdc-circular-progress';
-@use '@material/icon-button'; 
+@use '@material/icon-button/icon-button'; 
 @use '@material/icon-button/mdc-icon-button';
 @use '@material/data-table/data-table';
 @use '@material/button';
@@ -86,7 +86,7 @@ $instagram-bg-grad: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #
 @include checkbox.core-styles;
 @include form-field.core-styles;
 @include checkbox.core-styles;
-//@include icon-button.core-styles; // Undefined mixin
+@include icon-button.core-styles; // Undefined mixin
 @include data-table.core-styles;
 @include data-table.theme-baseline;
 @include dialog.core-styles;
@@ -200,10 +200,6 @@ svg {
 
 .fa-xxs {font-size: ($base-unit * 3.5);}
 
-.shadow-up-sm {
-  box-shadow: 0 (-($base-unit / 2)) $base-unit #00000013 !important;
-}
-
 .screen-reader-text {
   position: absolute;
   width: 1px;
@@ -215,6 +211,8 @@ svg {
   white-space: nowrap; /* added line */
   border: 0;
 }
+
+.opacity-1 {opacity: 1 !important;}
 
 // Layout
 //--------------------------------------------------
@@ -257,20 +255,16 @@ svg {
   }
 
   .global-sub-header-drawer {
-    top: 0 !important;
-    //height: ($base-unit * 40);
-    height: 0;
-    z-index: 90;
-    //transform: translateY(-($base-unit * 40)); 
-    //transition: transform 225ms ease-in-out;
-    transition: height 500ms ease;
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease;
     scrollbar-width: thin;
     scroll-behavior: smooth;
 
     &.is-shown {
-      //transform: translateY($base-unit * 40); 
-      //transition: transform 225ms ease-in-out;
-      height: ($base-unit * 42);
+      height: auto;
+      max-height: ($base-unit * 192);
     }
 
     .mdc-layout-grid__inner {
@@ -297,7 +291,7 @@ svg {
 #menu-button {text-transform: capitalize;}
 
 .avatar-button {
-  //@include button.ink-color(#ffffff);
+  @include button.ink-color(#ffffff); // Apply to all relevant buttons. 
 
   .mdc-button__icon {
     width: ($base-unit * 8);
