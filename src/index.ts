@@ -34,6 +34,7 @@ import { MDCTab } from '@material/tab';
 import { MDCTextField } from '@material/textfield';
 import { MDCTooltip } from '@material/tooltip';
 import { MDCTopAppBar } from '@material/top-app-bar';
+import { MDCIconButtonToggle } from '@material/icon-button';
 import './scss/styles.scss';
 
 //----------------------------------------
@@ -98,3 +99,35 @@ const list = new MDCList(document.querySelector('.mdc-deprecated-list'));
 
 //
 //----------------------------------------
+
+const appBarEl = document.querySelector('.global-sub-header-drawer');
+const appBar = MDCTopAppBar.attachTo(appBarEl);
+const toggleButton = document.querySelector('.link-drawer-button');
+const iconToggle = new MDCIconButtonToggle(
+  document.querySelector('.link-drawer-button')
+);
+
+toggleButton.addEventListener('click', function () {
+  appBarEl.classList.toggle('is-shown');
+});
+
+//
+//----------------------------------------
+
+const fabRipple = new MDCRipple(document.querySelector('.mdc-fab'));
+const scrollToButton = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', (event) => {
+  if (window.scrollY > 50) {
+    scrollToButton.classList.remove('mdc-fab--exited');
+    //scrollToButton.classList.add('d-inline-flex');
+  } else {
+    scrollToButton.classList.add('mdc-fab--exited');
+    //scrollToButton.classList.remove('d-inline-flex');
+  }
+});
+
+scrollToButton.scrollIntoView({
+  behavior: 'smooth',
+  block: 'start'
+});

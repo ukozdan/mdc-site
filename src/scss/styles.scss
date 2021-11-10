@@ -1,19 +1,33 @@
 //----------------------------------------
+// Notes
+//----------------------------------------
+
+// Todo: replace custom containers with BS containers.
+
+//----------------------------------------
 // Variables
 //----------------------------------------
 
 $base-unit: 4px;
 
+// 
+//--------------------------------------------------
+
 $phone: 0px;
 $tablet: 600px;
 $desktop: 840px;
+
+$mdc-layout-grid-default-gutter: ($base-unit * 6);
+
+// 
+//--------------------------------------------------
 
 $facebook: #3b5998;
 $twitter: #1DA1F2;
 $youtube: #FF0000;
 $linkedin: #0072b1;
 $instagram-bg: #e1306c;
-$instagram-bg-grad: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+$instagram-bg-grad: linear-gradient(45deg, #FFDC80, #FCAF45, #F77737, #F56040, #FD1D1D, #E1306C, #C13584, #833AB4, #5B51D8, #405DE6);
 
 //----------------------------------------
 // @use
@@ -21,9 +35,13 @@ $instagram-bg-grad: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #
 
 @use "@material/theme" with (
   $primary: #333333,
+  $on-primary: #FFFFFF,
   $secondary: #999999,
-  $on-primary: #ffffff,
-  $on-secondary: #ffffff,
+  $on-secondary: #FFFFFF,
+  $surface: #FFFFFF,
+  $on-surface: #212529,
+  $background: #f2f1f0,
+  //$on-background: #000000,
 );
 @use '@material/animation';
 @use '@material/banner/styles';
@@ -33,7 +51,7 @@ $instagram-bg-grad: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #
 @use '@material/form-field';
 @use '@material/chips/styles' as c-styles;
 @use '@material/circular-progress/mdc-circular-progress';
-@use '@material/icon-button'; 
+@use '@material/icon-button/icon-button'; 
 @use '@material/icon-button/mdc-icon-button';
 @use '@material/data-table/data-table';
 @use '@material/button';
@@ -82,7 +100,7 @@ $instagram-bg-grad: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #
 @include checkbox.core-styles;
 @include form-field.core-styles;
 @include checkbox.core-styles;
-//@include icon-button.core-styles; // Undefined mixin
+@include icon-button.core-styles; // Undefined mixin
 @include data-table.core-styles;
 @include data-table.theme-baseline;
 @include dialog.core-styles;
@@ -127,7 +145,7 @@ $instagram-bg-grad: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #
 @import "bootstrap/scss/reboot";
 //@import "bootstrap/scss/type";
 @import "bootstrap/scss/images";
-//@import "bootstrap/scss/containers";
+@import "bootstrap/scss/containers";
 //@import "bootstrap/scss/grid";
 //@import "bootstrap/scss/tables";
 //@import "bootstrap/scss/forms";
@@ -170,7 +188,10 @@ $instagram-bg-grad: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #
 
 * {letter-spacing: initial;}
 
-html {min-height: 100%;}
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
 
 body {
   //display: flex; 
@@ -179,8 +200,7 @@ body {
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
   font-size: ($base-unit * 4);
-  line-height: ($base-unit * 5);
-  // mobile width: 375px approx
+  line-height: ($base-unit * 6);
 }
 
 svg {
@@ -194,11 +214,9 @@ svg {
 
 .mw-0 {min-width: 0 !important;}
 
-.fa-xxs {font-size: ($base-unit * 3.5);}
+.gg-0 {grid-gap: 0 !important;}
 
-.shadow-up-sm {
-  box-shadow: 0 (-($base-unit / 2)) $base-unit #00000013 !important;
-}
+.fa-xxs {font-size: ($base-unit * 3.5);}
 
 .screen-reader-text {
   position: absolute;
@@ -212,22 +230,7 @@ svg {
   border: 0;
 }
 
-// Layout
-//--------------------------------------------------
-
-.container, .container-content {
-  display: inherit;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.container {
-  max-width: 1480px;
-}
-
-.container-content {
-  max-width: 1000px;
-}
+.opacity-1 {opacity: 1 !important;}
 
 // Drawer and Top app bar
 //--------------------------------------------------
@@ -235,9 +238,9 @@ svg {
 .mdc-drawer {}
 
 .mdc-drawer-app-content {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+  //display: flex;
+  //flex-direction: column;
+  //height: 100vh;
 }
 
 .mdc-top-app-bar {
@@ -247,8 +250,26 @@ svg {
 
     .mdc-icon-button {
       i {
-        vertical-align: bottom;
+        //vertical-align: bottom;
         }
+    }
+  }
+
+  .global-sub-header-drawer {
+    top: 0 !important;
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+
+    &.is-shown {
+      max-height: ($base-unit * 192);
+    }
+
+    .mdc-layout-grid__inner {
+      grid-row-gap: 0;
     }
   }
 
@@ -256,11 +277,11 @@ svg {
     height: ($base-unit * 25);
   }
 
-  .custom-tab-bar {}
+  .primary-nav-tab-bar {}
 }
 
 .mdc-top-app-bar--fixed-adjust {
-  padding: ($base-unit * 54) ($base-unit * 6) ($base-unit * 6);
+  padding: ($base-unit * 54) 0 ($base-unit * 6);
 
   @media (max-width: $desktop) {
     padding-top: ($base-unit * 42);
@@ -270,7 +291,7 @@ svg {
 #menu-button {text-transform: capitalize;}
 
 .avatar-button {
-  @include button.ink-color(#ffffff);
+  @include button.ink-color(#ffffff); // Apply to all relevant buttons. 
 
   .mdc-button__icon {
     width: ($base-unit * 8);
@@ -287,7 +308,7 @@ svg {
   }
 }
 
-.main-content {flex: 1;}
+.main-content {}
 
 // Social media icons
 //--------------------------------------------------
@@ -348,9 +369,11 @@ svg {
 // Tab bar
 //--------------------------------------------------
 
-.custom-tab-bar {
-  @media (max-width: $desktop) {
-    display: none;
+.primary-nav-tab-bar {
+  display: none;
+
+  @media (min-width: $desktop) {
+    //display: inline-flex;
   }
 }
 
@@ -374,9 +397,13 @@ svg {
   .product-logo {font-size: ($base-unit * 6);}
 }
 
-// Hero banner
+// 
 //--------------------------------------------------
 
-.hero-banner-grid {
-  max-width: ($base-unit * 320);
+.back-to-top {
+	position: fixed;
+	bottom: ($base-unit * 6);
+	right: ($base-unit * 6);
+	z-index: 10000;
+	//display: none;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en-gb">
+<html dir="ltr" lang="en-gb" id="top">
   <head>
     <title>MDC site</title>
     <meta charset="UTF-8" />
@@ -54,210 +54,382 @@
 
     <div class="mdc-drawer-app-content">
       <header
-        class="mdc-top-app-bar app-bar bg-transparent text-dark shadow-sm"
+        class="mdc-top-app-bar bg-transparent text-dark shadow-sm"
         id="app-bar"
       >
-        <div class="mdc-top-app-bar__row global-sub-header bg-dark">
-          <div class="container">
-            <section
-              class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
-            >
-              <button
-                class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
-                aria-label="Menu"
+        <div>
+          <div class="mdc-top-app-bar__row global-sub-header bg-dark">
+            <div class="container-lg d-flex">
+              <section
+                class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
               >
-                menu
-              </button>
-            </section>
-            <section
-              class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
-              role="toolbar"
-            >
-              <div class="social-media-icons d-flex align-items-center">
-                <a
-                  href="https://www.facebook.com/"
-                  rel="noopener"
-                  target="_blank"
-                  title="(opens in a new tab)"
-                  class="material-icons mdc-top-app-bar__action-item--unbounded mdc-icon-button material-icons-fa"
-                  aria-label=""
+                <button
+                  class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
+                  aria-label="Menu"
                 >
-                  <span class="fa-stack fa-xxs">
-                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                  </span>
-                </a>
-
-                <a
-                  href="https://twitter.com/"
-                  rel="noopener"
-                  target="_blank"
-                  title="(opens in a new tab)"
-                  class="material-icons mdc-top-app-bar__action-item--unbounded mdc-icon-button material-icons-fa"
-                  aria-label=""
-                >
-                  <span class="fa-stack fa-xxs">
-                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                  </span>
-                </a>
-
-                <a
-                  href="https://www.youtube.com/"
-                  rel="noopener"
-                  target="_blank"
-                  title="(opens in a new tab)"
-                  class="material-icons mdc-top-app-bar__action-item--unbounded mdc-icon-button material-icons-fa"
-                  aria-label=""
-                >
-                  <span class="fa-stack fa-xxs">
-                    <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                  </span>
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/"
-                  rel="noopener"
-                  target="_blank"
-                  title="(opens in a new tab)"
-                  class="material-icons mdc-top-app-bar__action-item--unbounded mdc-icon-button material-icons-fa"
-                  aria-label=""
-                >
-                  <span class="fa-stack fa-xxs">
-                    <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                  </span>
-                </a>
-
-                <a
-                  href="https://www.instagram.com/"
-                  rel="noopener"
-                  target="_blank"
-                  title="(opens in a new tab)"
-                  class="material-icons mdc-top-app-bar__action-item--unbounded mdc-icon-button material-icons-fa"
-                  aria-label=""
-                >
-                  <span class="fa-stack fa-xxs">
-                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                  </span>
-                </a>
-              </div>
-
-              <div id="demo-menu" class="mdc-menu-surface--anchor mw-0">
+                  menu
+                </button>
+              </section>
+              <section
+                class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
+                role="toolbar"
+              >
                 <div class="mdc-touch-target-wrapper">
                   <button
-                    id="menu-button"
-                    class="mdc-button mdc-button--icon-leading avatar-button w-100"
-                    title="User name text"
+                    class="mdc-button link-drawer-button mdc-button--icon-leading w-100 text-capitalize text-white"
+                    title="View related sites"
+                    aria-label="Open related sites"
+                    aria-pressed="false"
                   >
                     <span class="mdc-button__ripple"></span>
                     <i
-                      class="material-icons mdc-button__icon"
-                      aria-hidden="true"
-                      >account_circle</i
+                      class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on"
+                      >expand_less</i
+                    >
+                    <i class="material-icons mdc-icon-button__icon"
+                      >expand_more</i
                     >
                     <span class="mdc-button__label d-inline-block text-truncate"
-                      >User name text</span
+                      >View related sites</span
                     >
                   </button>
                 </div>
-                <div class="mdc-menu mdc-menu-surface">
-                  <ul
-                    class="mdc-deprecated-list"
-                    role="menu"
-                    aria-hidden="true"
-                    aria-orientation="vertical"
-                    tabindex="-1"
+                <div class="social-media-icons d-flex align-items-center">
+                  <a
+                    href="https://www.facebook.com/"
+                    rel="noopener"
+                    target="_blank"
+                    title="(opens in a new tab)"
+                    class="material-icons mdc-top-app-bar__action-item--unbounded mdc-icon-button material-icons-fa"
+                    aria-label=""
                   >
-                    <li class="mdc-deprecated-list-item" role="menuitem">
-                      <span class="mdc-deprecated-list-item__ripple"></span>
-                      <span
-                        class="mdc-deprecated-list-item__graphic mdc-menu__selection-group-icon material-icons"
+                    <span class="fa-stack fa-xxs">
+                      <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                    </span>
+                  </a>
+
+                  <a
+                    href="https://twitter.com/"
+                    rel="noopener"
+                    target="_blank"
+                    title="(opens in a new tab)"
+                    class="material-icons mdc-top-app-bar__action-item--unbounded mdc-icon-button material-icons-fa"
+                    aria-label=""
+                  >
+                    <span class="fa-stack fa-xxs">
+                      <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                    </span>
+                  </a>
+
+                  <a
+                    href="https://www.youtube.com/"
+                    rel="noopener"
+                    target="_blank"
+                    title="(opens in a new tab)"
+                    class="material-icons mdc-top-app-bar__action-item--unbounded mdc-icon-button material-icons-fa"
+                    aria-label=""
+                  >
+                    <span class="fa-stack fa-xxs">
+                      <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                    </span>
+                  </a>
+
+                  <a
+                    href="https://www.linkedin.com/"
+                    rel="noopener"
+                    target="_blank"
+                    title="(opens in a new tab)"
+                    class="material-icons mdc-top-app-bar__action-item--unbounded mdc-icon-button material-icons-fa"
+                    aria-label=""
+                  >
+                    <span class="fa-stack fa-xxs">
+                      <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                    </span>
+                  </a>
+
+                  <a
+                    href="https://www.instagram.com/"
+                    rel="noopener"
+                    target="_blank"
+                    title="(opens in a new tab)"
+                    class="material-icons mdc-top-app-bar__action-item--unbounded mdc-icon-button material-icons-fa"
+                    aria-label=""
+                  >
+                    <span class="fa-stack fa-xxs">
+                      <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                    </span>
+                  </a>
+                </div>
+
+                <div id="demo-menu" class="mdc-menu-surface--anchor mw-0">
+                  <div class="mdc-touch-target-wrapper">
+                    <button
+                      id="menu-button"
+                      class="mdc-button mdc-button--icon-leading avatar-button w-100"
+                      title="User name text"
+                    >
+                      <span class="mdc-button__ripple"></span>
+                      <i
+                        class="material-icons mdc-button__icon"
                         aria-hidden="true"
-                        >logout</span
+                        >account_circle</i
                       >
-                      <span class="mdc-deprecated-list-item__text"
-                        >Log out</span
+                      <span
+                        class="mdc-button__label d-inline-block text-truncate"
+                        >User name text</span
                       >
-                    </li>
-                  </ul>
+                    </button>
+                  </div>
+                  <div class="mdc-menu mdc-menu-surface">
+                    <ul
+                      class="mdc-deprecated-list"
+                      role="menu"
+                      aria-hidden="true"
+                      aria-orientation="vertical"
+                      tabindex="-1"
+                    >
+                      <li class="mdc-deprecated-list-item" role="menuitem">
+                        <span class="mdc-deprecated-list-item__ripple"></span>
+                        <span
+                          class="mdc-deprecated-list-item__graphic mdc-menu__selection-group-icon material-icons"
+                          aria-hidden="true"
+                          >logout</span
+                        >
+                        <span class="mdc-deprecated-list-item__text"
+                          >Log out</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!--<button
+                  title="User menu"
+                  class="material-icons mdc-top-app-bar__action-item--unbounded mdc-icon-button material-icons-fa"
+                  aria-label="User menu"
+                >
+                  <span class="fa-stack fa-xxs">
+                    <i class="fas fa-user fa-stack-1x fa-inverse"></i>
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                  </span>
+                </button>-->
+
+                <!--<button
+                  class="material-icons mdc-top-app-bar__action-item--unbounded mdc-icon-button avatar-button"
+                  aria-label="Favorite"
+                >
+                  account_circle
+                </button>-->
+              </section>
+            </div>
+          </div>
+          <div
+            class="mdc-top-app-bar__row global-sub-header-drawer bg-dark text-white"
+          >
+            <div class="container-lg d-flex">
+              <div class="mdc-layout-grid w-100 pt-0">
+                <div class="mdc-layout-grid__inner">
+                  <div
+                    class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-6-desktop"
+                  >
+                    <ul class="mdc-deprecated-list p-0 text-white">
+                      <li class="mdc-deprecated-list-item" tabindex="0">
+                        <span
+                          class="mdc-deprecated-list-item__graphic material-icons text-white"
+                          aria-hidden="true"
+                          >video_file</span
+                        >
+                        <span class="mdc-deprecated-list-item__text"
+                          >Nunc porttitor nulla erat</span
+                        >
+                      </li>
+                      <li class="mdc-deprecated-list-item">
+                        <span
+                          class="mdc-deprecated-list-item__graphic material-icons text-white"
+                          aria-hidden="true"
+                          >video_file</span
+                        >
+                        <span class="mdc-deprecated-list-item__text"
+                          >Nunc porttitor nulla erat</span
+                        >
+                      </li>
+                      <li class="mdc-deprecated-list-item">
+                        <span
+                          class="mdc-deprecated-list-item__graphic material-icons text-white"
+                          aria-hidden="true"
+                          >video_file</span
+                        >
+                        <span class="mdc-deprecated-list-item__text"
+                          >Nunc porttitor nulla erat</span
+                        >
+                      </li>
+                    </ul>
+                    <hr class="mdc-deprecated-list-divider" />
+                    <ul class="mdc-deprecated-list p-0 text-white">
+                      <li class="mdc-deprecated-list-item" tabindex="0">
+                        <span
+                          class="mdc-deprecated-list-item__graphic material-icons text-white"
+                          aria-hidden="true"
+                          >video_file</span
+                        >
+                        <span class="mdc-deprecated-list-item__text"
+                          >Nunc porttitor nulla erat</span
+                        >
+                      </li>
+                      <li class="mdc-deprecated-list-item">
+                        <span
+                          class="mdc-deprecated-list-item__graphic material-icons text-white"
+                          aria-hidden="true"
+                          >video_file</span
+                        >
+                        <span class="mdc-deprecated-list-item__text"
+                          >Nunc porttitor nulla erat</span
+                        >
+                      </li>
+                      <li class="mdc-deprecated-list-item">
+                        <span
+                          class="mdc-deprecated-list-item__graphic material-icons text-white"
+                          aria-hidden="true"
+                          >video_file</span
+                        >
+                        <span class="mdc-deprecated-list-item__text"
+                          >Nunc porttitor nulla erat</span
+                        >
+                      </li>
+                    </ul>
+                    <hr class="mdc-deprecated-list-divider d-md-none" />
+                  </div>
+                  <div
+                    class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-6-desktop"
+                  >
+                    <ul class="mdc-deprecated-list p-0 text-white">
+                      <li class="mdc-deprecated-list-item" tabindex="0">
+                        <span
+                          class="mdc-deprecated-list-item__graphic material-icons text-white"
+                          aria-hidden="true"
+                          >video_file</span
+                        >
+                        <span class="mdc-deprecated-list-item__text"
+                          >Nunc porttitor nulla erat</span
+                        >
+                      </li>
+                      <li class="mdc-deprecated-list-item">
+                        <span
+                          class="mdc-deprecated-list-item__graphic material-icons text-white"
+                          aria-hidden="true"
+                          >video_file</span
+                        >
+                        <span class="mdc-deprecated-list-item__text"
+                          >Nunc porttitor nulla erat</span
+                        >
+                      </li>
+                      <li class="mdc-deprecated-list-item">
+                        <span
+                          class="mdc-deprecated-list-item__graphic material-icons text-white"
+                          aria-hidden="true"
+                          >video_file</span
+                        >
+                        <span class="mdc-deprecated-list-item__text"
+                          >Nunc porttitor nulla erat</span
+                        >
+                      </li>
+                    </ul>
+                    <hr class="mdc-deprecated-list-divider" />
+                    <ul class="mdc-deprecated-list p-0 text-white">
+                      <li class="mdc-deprecated-list-item" tabindex="0">
+                        <span
+                          class="mdc-deprecated-list-item__graphic material-icons text-white"
+                          aria-hidden="true"
+                          >video_file</span
+                        >
+                        <span class="mdc-deprecated-list-item__text"
+                          >Nunc porttitor nulla erat</span
+                        >
+                      </li>
+                      <li class="mdc-deprecated-list-item">
+                        <span
+                          class="mdc-deprecated-list-item__graphic material-icons text-white"
+                          aria-hidden="true"
+                          >video_file</span
+                        >
+                        <span class="mdc-deprecated-list-item__text"
+                          >Nunc porttitor nulla erat</span
+                        >
+                      </li>
+                      <li class="mdc-deprecated-list-item">
+                        <span
+                          class="mdc-deprecated-list-item__graphic material-icons text-white"
+                          aria-hidden="true"
+                          >video_file</span
+                        >
+                        <span class="mdc-deprecated-list-item__text"
+                          >Nunc porttitor nulla erat</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-
-              <!--<button
-                title="User menu"
-                class="material-icons mdc-top-app-bar__action-item--unbounded mdc-icon-button material-icons-fa"
-                aria-label="User menu"
-              >
-                <span class="fa-stack fa-xxs">
-                  <i class="fas fa-user fa-stack-1x fa-inverse"></i>
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                </span>
-              </button>-->
-
-              <!--<button
-                class="material-icons mdc-top-app-bar__action-item--unbounded mdc-icon-button avatar-button"
-                aria-label="Favorite"
-              >
-                account_circle
-              </button>-->
-            </section>
+            </div>
           </div>
-        </div>
-        <div class="mdc-top-app-bar__row branding-sub-header bg-white">
-          <div class="container">
-            <section
-              class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start flex-shrink-1 p-4"
-            >
-              <span class="mdc-top-app-bar__title ps-0">
-                <a href="">
-                  <img src="./src/images/logo.svg" class="img-fluid" />
-                </a>
-              </span>
-            </section>
-
-            <section
-              class="mdc-top-app-bar__section d-flex align-items-center w-100 p-4 ps-0"
-            >
-              <p class="mb-0 mt-0 mdc-typography--headline5 product-logo">
-                Product Brand Paragraph Text
-              </p>
-            </section>
-
-            <!--<section
-              class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
-              role="toolbar"
-            >
-              <label
-                class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label mdc-text-field--with-trailing-icon"
+          <div class="mdc-top-app-bar__row branding-sub-header bg-white">
+            <div class="container-xl d-flex">
+              <section
+                class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start flex-shrink-1 p-4"
               >
-                <span class="mdc-notched-outline">
-                  <span class="mdc-notched-outline__leading"></span>
-                  <span class="mdc-notched-outline__trailing"></span>
+                <span class="mdc-top-app-bar__title ps-0">
+                  <a href="">
+                    <img src="./src/images/logo.svg" class="img-fluid" />
+                  </a>
                 </span>
-                <input
-                  class="mdc-text-field__input"
-                  type="text"
-                  aria-label="Label"
-                />
-                <i
-                  class="material-icons mdc-text-field__icon mdc-text-field__icon--trailing"
-                  tabindex="0"
-                  role="button"
-                  >search</i
+              </section>
+
+              <section
+                class="mdc-top-app-bar__section d-flex align-items-center w-100 p-4 ps-0"
+              >
+                <p class="mb-0 mt-0 mdc-typography--headline5 product-logo">
+                  Product Brand Paragraph Text
+                </p>
+              </section>
+
+              <!--<section
+                class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
+                role="toolbar"
+              >
+                <label
+                  class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label mdc-text-field--with-trailing-icon"
                 >
-              </label>
-            </section>-->
+                  <span class="mdc-notched-outline">
+                    <span class="mdc-notched-outline__leading"></span>
+                    <span class="mdc-notched-outline__trailing"></span>
+                  </span>
+                  <input
+                    class="mdc-text-field__input"
+                    type="text"
+                    aria-label="Label"
+                  />
+                  <i
+                    class="material-icons mdc-text-field__icon mdc-text-field__icon--trailing"
+                    tabindex="0"
+                    role="button"
+                    >search</i
+                  >
+                </label>
+              </section>-->
+            </div>
           </div>
-        </div>
-        <div class="mdc-tab-bar custom-tab-bar bg-white" role="tablist">
-          <div class="container">
-            <div class="mdc-layout-grid pt-0 pb-0">
-              <div class="mdc-layout-grid__inner">
+
+          <div class="mdc-top-app-bar__row h-auto bg-white">
+            <div class="container-xl d-flex">
+              <section class="mdc-top-app-bar__section w-100 p-0 ps-4 pe-4">
                 <div
-                  class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-6-desktop"
+                  class="mdc-tab-bar primary-nav-tab-bar d-inline-flex bg-white"
+                  role="tablist"
                 >
                   <div class="mdc-tab-scroller">
                     <div class="mdc-tab-scroller__scroll-area">
@@ -308,148 +480,149 @@
                             ></span></span
                           ><span class="mdc-tab__ripple"></span>
                         </button>
+                        <button
+                          class="mdc-tab"
+                          role="tab"
+                          aria-selected="false"
+                        >
+                          <span class="mdc-tab__content"
+                            ><span class="mdc-tab__text-label"
+                              >Text link 4</span
+                            ></span
+                          ><span class="mdc-tab-indicator"
+                            ><span
+                              class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+                            ></span></span
+                          ><span class="mdc-tab__ripple"></span>
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div
-                  class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-6-desktop"
-                ></div>
-              </div>
+              </section>
             </div>
           </div>
         </div>
       </header>
 
-      <main class="main-content" id="main-content">
-        <div class="container">
-          <div class="mdc-top-app-bar--fixed-adjust">
-            <!--<button
-              tabindex="0"
-              class="sr-only"
-            ></button>-->
-            <div class="hero-banner mb-4">
-              <div class="container bg-white">
-                <div class="mdc-layout-grid p-0 ms-auto me-0 hero-banner-grid">
-                  <div class="mdc-layout-grid__inner">
-                    <div
-                      class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-8-desktop p-4 d-flex align-items-center order-2 order-md-1"
-                    >
-                      <div>
-                        <h1 class="mdc-typography mdc-typography--headline4">
-                          Lorem ipsum dolor sit amet consectetur adipiscing
-                        </h1>
-                        <h2 class="mdc-typography mdc-typography--headline6">
-                          Suspendisse rutrum sodales tincidunt. Vivamus non
-                          scelerisque sem. Donec vel augue sed libero mollis
-                          suscipit id at quam. Phasellus maximus tincidunt
-                          vestibulum. Suspendisse posuere elit vitae mauris
-                          porttitor fermentum.
-                        </h2>
-                      </div>
+      <main
+        class="mdc-top-app-bar--fixed-adjust main-content"
+        id="main-content"
+      >
+        <div class="container-xxl hero-banner">
+          <div class="mdc-layout-grid pt-0 pb-0">
+            <div class="mdc-layout-grid__inner gg-0">
+              <div
+                class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-8-desktop d-flex order-2 order-md-1 bg-secondary bg-gradient text-white"
+              >
+                <div class="align-self-center p-5">
+                  <h1 class="mdc-typography mdc-typography--headline4">
+                    Lorem ipsum dolor sit amet consectetur adipiscing
+                  </h1>
+                  <h2 class="mdc-typography mdc-typography--headline6">
+                    Suspendisse rutrum sodales tincidunt. Vivamus non
+                    scelerisque sem. Donec vel augue sed libero mollis suscipit
+                    id at quam. Phasellus maximus tincidunt vestibulum.
+                    Suspendisse posuere elit vitae mauris.
+                  </h2>
+                </div>
+              </div>
+              <div
+                class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-4-desktop order-1 order-md-2"
+              >
+                <picture>
+                  <source
+                    srcset="https://via.placeholder.com/500x500"
+                    media="(min-width: 840px)"
+                    class="d-block img-fluid"
+                  />
+                  <source
+                    srcset="https://via.placeholder.com/823x353"
+                    media="(min-width: 600px)"
+                    class="d-block img-fluid"
+                  />
+                  <img
+                    src="https://via.placeholder.com/570x244"
+                    class="d-block img-fluid"
+                    alt="Placeholder image"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-xl">
+          <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+              <div
+                class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-6-desktop"
+              >
+                <div class="mdc-card mdc-card--outlined">
+                  <div class="mdc-card__media">
+                    <img
+                      class="img-fluid"
+                      src="https://via.placeholder.com/740x317"
+                    />
+                  </div>
+                  <div class="mdc-card-wrapper__text-section">
+                    <div class="pt-4 pe-4 pb-0 ps-4">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Curabitur in est ultricies nibh pellentesque lacinia non
+                        nec mauris. Vivamus ac est id lorem rhoncus ultrices.
+                        Praesent fermentum semper felis et auctor.
+                      </p>
                     </div>
-                    <div
-                      class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-4-desktop ms-auto order-1 order-md-2"
+                  </div>
+                  <div class="mdc-card__actions p-4">
+                    <button
+                      tabindex="0"
+                      class="mdc-button mdc-button--unelevated mdc-card__action mdc-card__action--button mdc-button--icon-trailing mdc-ripple-upgraded"
                     >
-                      <picture>
-                        <source
-                          srcset="https://via.placeholder.com/400x400"
-                          media="(min-width: 840px)"
-                          class="d-block img-fluid"
-                        />
-                        <source
-                          srcset="https://via.placeholder.com/823x353"
-                          media="(min-width: 600px)"
-                          class="d-block img-fluid"
-                        />
-                        <img
-                          src="https://via.placeholder.com/570x244"
-                          class="d-block img-fluid"
-                          alt="Placeholder image"
-                        />
-                      </picture>
-                    </div>
+                      <span class="mdc-button__label">Action</span>
+                      <i
+                        class="material-icons mdc-button__icon"
+                        aria-hidden="true"
+                        >arrow_forward_ios</i
+                      >
+                      <div class="mdc-button__ripple"></div>
+                    </button>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="container-content">
-              <div class="mdc-card">
-                <div class="mdc-layout-grid w-100">
-                  <div class="mdc-layout-grid__inner">
-                    <div
-                      class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-6-desktop"
-                    >
-                      <div class="mdc-card mdc-card--outlined border-0">
-                        <div class="mdc-card__media">
-                          <img
-                            class="img-fluid"
-                            src="https://via.placeholder.com/1440x617"
-                          />
-                        </div>
-                        <div class="mdc-card-wrapper__text-section">
-                          <div class="pt-4 pe-4 pb-0 ps-4">
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Curabitur in est ultricies nibh pellentesque
-                              lacinia non nec mauris. Vivamus ac est id lorem
-                              rhoncus ultrices. Praesent fermentum semper felis
-                              et auctor.
-                            </p>
-                          </div>
-                        </div>
-                        <div class="mdc-card__actions p-4">
-                          <button
-                            tabindex="0"
-                            class="mdc-button mdc-button--unelevated mdc-card__action mdc-card__action--button mdc-button--icon-trailing"
-                          >
-                            <span class="mdc-button__label">Action</span>
-                            <i
-                              class="material-icons mdc-button__icon"
-                              aria-hidden="true"
-                              >arrow_forward_ios</i
-                            >
-                            <div class="mdc-button__ripple"></div>
-                          </button>
-                        </div>
-                      </div>
+              <div
+                class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-6-desktop"
+              >
+                <div class="mdc-card mdc-card--outlined">
+                  <div class="mdc-card__media">
+                    <img
+                      class="img-fluid"
+                      src="https://via.placeholder.com/740x317"
+                    />
+                  </div>
+                  <div class="mdc-card-wrapper__text-section">
+                    <div class="pt-4 pe-4 pb-0 ps-4">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Curabitur in est ultricies nibh pellentesque lacinia non
+                        nec mauris. Vivamus ac est id lorem rhoncus ultrices.
+                        Praesent fermentum semper felis et auctor.
+                      </p>
                     </div>
-                    <div
-                      class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-6-desktop"
+                  </div>
+                  <div class="mdc-card__actions p-4">
+                    <button
+                      tabindex="0"
+                      class="mdc-button mdc-button--unelevated mdc-card__action mdc-card__action--button mdc-button--icon-trailing mdc-ripple-upgraded"
                     >
-                      <div class="mdc-card mdc-card--outlined border-0">
-                        <div class="mdc-card__media">
-                          <img
-                            class="img-fluid"
-                            src="https://via.placeholder.com/1440x617"
-                          />
-                        </div>
-                        <div class="mdc-card-wrapper__text-section">
-                          <div class="pt-4 pe-4 pb-0 ps-4">
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Curabitur in est ultricies nibh pellentesque
-                              lacinia non nec mauris. Vivamus ac est id lorem
-                              rhoncus ultrices. Praesent fermentum semper felis
-                              et auctor.
-                            </p>
-                          </div>
-                        </div>
-                        <div class="mdc-card__actions p-4">
-                          <button
-                            class="mdc-button mdc-button--unelevated mdc-card__action mdc-card__action--button mdc-button--icon-trailing"
-                          >
-                            <span class="mdc-button__label">Action</span>
-                            <i
-                              class="material-icons mdc-button__icon"
-                              aria-hidden="true"
-                              >arrow_forward_ios</i
-                            >
-                            <div class="mdc-button__ripple"></div>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
+                      <span class="mdc-button__label">Action</span>
+                      <i
+                        class="material-icons mdc-button__icon"
+                        aria-hidden="true"
+                        >arrow_forward_ios</i
+                      >
+                      <div class="mdc-button__ripple"></div>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -458,8 +631,8 @@
         </div>
       </main>
 
-      <footer class="main-footer bg-white shadow-up-sm" id="main-footer">
-        <div class="container">
+      <footer class="main-footer bg-white" id="main-footer">
+        <div class="container-lg d-flex">
           <div class="mdc-layout-grid w-100">
             <div class="mdc-layout-grid__inner">
               <div
@@ -502,9 +675,11 @@
                       >Text link 2</span
                     >
                   </li>
-                  <li class="mdc-deprecated-list-item">
+                  <li
+                    class="mdc-deprecated-list-item mdc-deprecated-list-item--disabled"
+                  >
                     <span class="mdc-deprecated-list-item__ripple"></span>
-                    <span class="mdc-deprecated-list-item__text"
+                    <span class="mdc-deprecated-list-item__text opacity-1"
                       >Text link 3</span
                     >
                   </li>
@@ -514,7 +689,7 @@
                 class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-4-desktop d-flex justify-content-end align-items-start"
               >
                 <a href="" class="d-flex justify-content-end">
-                  <img src="./src/images/logo.svg" class="img-fluid w-75" />
+                  <img src="./src/images/logo.svg" class="img-fluid w-50" />
                 </a>
               </div>
             </div>
@@ -522,6 +697,16 @@
         </div>
       </footer>
     </div>
+
+    <a
+      href="#top"
+      id="back-to-top"
+      class="mdc-fab mdc-fab--extended mdc-fab--exited back-to-top"
+    >
+      <div class="mdc-fab__ripple"></div>
+      <span class="material-icons mdc-fab__icon">expand_less</span>
+      <span class="mdc-fab__label">Back to top</span>
+    </a>
 
     <script src="src/index.ts"></script>
   </body>
