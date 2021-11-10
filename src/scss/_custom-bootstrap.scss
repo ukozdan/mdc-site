@@ -373,15 +373,15 @@
 // You can add more entries to the $spacers map, should you need more variation.
 
 // scss-docs-start spacer-variables-maps
-//$spacer: 1rem !default;
-//$spacers: (
-//  0: 0,
-//  1: $spacer * .25,
-//  2: $spacer * .5,
-//  3: $spacer,
-//  4: $spacer * 1.5,
-//  5: $spacer * 3,
-////) !default;
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
 
 //$negative-spacers: if($enable-negative-margins, negativify-map($spacers), null//) !default;
 // scss-docs-end spacer-variables-maps
@@ -483,13 +483,13 @@ $grid-breakpoints: (
 // Define the maximum width of `.container` for different screen sizes.
 
 // scss-docs-start container-max-widths
-//$container-max-widths: (
-//  sm: 600px, // 540px
-//  md: 840px, // 720px
-//  lg: 960px,
-//  xl: 1140px,
-//  xxl: 1320px
-//);
+$container-max-widths: (
+  sm: 600px, // 540px
+  md: 840px, // 720px
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
 // scss-docs-end container-max-widths
 
 //@include _assert-ascending($container-max-widths, "$container-max-widths");

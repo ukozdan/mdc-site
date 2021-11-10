@@ -110,3 +110,24 @@ const iconToggle = new MDCIconButtonToggle(
 toggleButton.addEventListener('click', function () {
   appBarEl.classList.toggle('is-shown');
 });
+
+//
+//----------------------------------------
+
+const fabRipple = new MDCRipple(document.querySelector('.mdc-fab'));
+const scrollToButton = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', (event) => {
+  if (window.scrollY > 50) {
+    scrollToButton.classList.remove('mdc-fab--exited');
+    //scrollToButton.classList.add('d-inline-flex');
+  } else {
+    scrollToButton.classList.add('mdc-fab--exited');
+    //scrollToButton.classList.remove('d-inline-flex');
+  }
+});
+
+scrollToButton.scrollIntoView({
+  behavior: 'smooth',
+  block: 'start'
+});

@@ -1,12 +1,26 @@
 //----------------------------------------
+// Notes
+//----------------------------------------
+
+// Todo: replace custom containers with BS containers.
+
+//----------------------------------------
 // Variables
 //----------------------------------------
 
 $base-unit: 4px;
 
+// 
+//--------------------------------------------------
+
 $phone: 0px;
 $tablet: 600px;
 $desktop: 840px;
+
+$mdc-layout-grid-default-gutter: ($base-unit * 6);
+
+// 
+//--------------------------------------------------
 
 $facebook: #3b5998;
 $twitter: #1DA1F2;
@@ -131,7 +145,7 @@ $instagram-bg-grad: linear-gradient(45deg, #FFDC80, #FCAF45, #F77737, #F56040, #
 @import "bootstrap/scss/reboot";
 //@import "bootstrap/scss/type";
 @import "bootstrap/scss/images";
-//@import "bootstrap/scss/containers";
+@import "bootstrap/scss/containers";
 //@import "bootstrap/scss/grid";
 //@import "bootstrap/scss/tables";
 //@import "bootstrap/scss/forms";
@@ -174,7 +188,10 @@ $instagram-bg-grad: linear-gradient(45deg, #FFDC80, #FCAF45, #F77737, #F56040, #
 
 * {letter-spacing: initial;}
 
-html {min-height: 100%;}
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
 
 body {
   //display: flex; 
@@ -197,6 +214,8 @@ svg {
 
 .mw-0 {min-width: 0 !important;}
 
+.gg-0 {grid-gap: 0 !important;}
+
 .fa-xxs {font-size: ($base-unit * 3.5);}
 
 .screen-reader-text {
@@ -212,23 +231,6 @@ svg {
 }
 
 .opacity-1 {opacity: 1 !important;}
-
-// Layout
-//--------------------------------------------------
-
-.container, .container-content {
-  display: inherit;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.container {
-  max-width: 1480px;
-}
-
-.container-content {
-  max-width: 1000px;
-}
 
 // Drawer and Top app bar
 //--------------------------------------------------
@@ -248,12 +250,13 @@ svg {
 
     .mdc-icon-button {
       i {
-        vertical-align: bottom;
+        //vertical-align: bottom;
         }
     }
   }
 
   .global-sub-header-drawer {
+    top: 0 !important;
     height: auto;
     max-height: 0;
     overflow: hidden;
@@ -262,7 +265,6 @@ svg {
     scroll-behavior: smooth;
 
     &.is-shown {
-      //height: auto;
       max-height: ($base-unit * 192);
     }
 
@@ -279,12 +281,11 @@ svg {
 }
 
 .mdc-top-app-bar--fixed-adjust {
-  //padding: ($base-unit * 54) ($base-unit * 6) ($base-unit * 6);
-  padding: ($base-unit * 6) ($base-unit * 6) ($base-unit * 12);
+  padding: ($base-unit * 54) 0 ($base-unit * 6);
 
-  /*@media (max-width: $desktop) {
+  @media (max-width: $desktop) {
     padding-top: ($base-unit * 42);
-  }*/
+  }
 }
 
 #menu-button {text-transform: capitalize;}
@@ -307,7 +308,7 @@ svg {
   }
 }
 
-.main-content {flex: 1;}
+.main-content {}
 
 // Social media icons
 //--------------------------------------------------
@@ -369,8 +370,10 @@ svg {
 //--------------------------------------------------
 
 .primary-nav-tab-bar {
-  @media (max-width: $desktop) {
-    display: none;
+  display: none;
+
+  @media (min-width: $desktop) {
+    //display: inline-flex;
   }
 }
 
@@ -394,9 +397,13 @@ svg {
   .product-logo {font-size: ($base-unit * 6);}
 }
 
-// Hero banner
+// 
 //--------------------------------------------------
 
-.hero-banner-grid {
-  max-width: ($base-unit * 320);
+.back-to-top {
+	position: fixed;
+	bottom: ($base-unit * 6);
+	right: ($base-unit * 6);
+	z-index: 10000;
+	//display: none;
 }
