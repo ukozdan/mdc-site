@@ -370,10 +370,10 @@ svg {
 //--------------------------------------------------
 
 .primary-nav-tab-bar {
-  display: none;
+  display: inline-flex;
 
-  @media (min-width: $desktop) {
-    //display: inline-flex;
+  @media (max-width: $desktop) {
+    display: none;
   }
 }
 
