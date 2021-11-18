@@ -97,7 +97,7 @@ ripples.unbounded = true;
 
 const list = new MDCList(document.querySelector('.mdc-deprecated-list'));
 
-//
+// Related site drawer
 //----------------------------------------
 
 const appBarEl = document.querySelector('.global-sub-header-drawer');
@@ -111,7 +111,7 @@ toggleButton.addEventListener('click', function () {
   appBarEl.classList.toggle('is-shown');
 });
 
-//
+// Scroll to top button
 //----------------------------------------
 
 const fabRipple = new MDCRipple(document.querySelector('.mdc-fab'));
@@ -120,10 +120,8 @@ const scrollToButton = document.getElementById('back-to-top');
 window.addEventListener('scroll', (event) => {
   if (window.scrollY > 50) {
     scrollToButton.classList.remove('mdc-fab--exited');
-    //scrollToButton.classList.add('d-inline-flex');
   } else {
     scrollToButton.classList.add('mdc-fab--exited');
-    //scrollToButton.classList.remove('d-inline-flex');
   }
 });
 
