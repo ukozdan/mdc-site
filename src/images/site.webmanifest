@@ -1,6 +1,7 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "LogoIpsum",
+    "short_name": "LogoIpsum",
+    "description": "A test website",
     "icons": [
         {
             "src": "android-chrome-192x192.png",
