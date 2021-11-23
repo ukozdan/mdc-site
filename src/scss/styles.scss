@@ -274,6 +274,13 @@ svg {
     .mdc-layout-grid__inner {
       grid-row-gap: 0;
     }
+
+    .mdc-deprecated-list-item {
+      &::before, &:focus, &:hover {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
   }
 
   .branding-sub-header {

@@ -132,3 +132,7 @@ scrollToButton.scrollIntoView({
 
 //
 //----------------------------------------
+
+const listItemRipples = list.listElements.map(
+  (listItemEl) => new MDCRipple(listItemEl)
+);
