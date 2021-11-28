@@ -71,6 +71,15 @@
             >
             <span class="mdc-deprecated-list-item__text">Text link 3</span>
           </a>
+          <a class="mdc-deprecated-list-item" href="#">
+            <span class="mdc-deprecated-list-item__ripple"></span>
+            <i
+              class="material-icons mdc-deprecated-list-item__graphic"
+              aria-hidden="true"
+              >chevron_right</i
+            >
+            <span class="mdc-deprecated-list-item__text">Text link 4</span>
+          </a>
         </nav>
       </div>
     </aside>
@@ -90,6 +99,7 @@
               <button
                 class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
                 aria-label="Menu"
+                title="Open main menu"
               >
                 menu
               </button>
@@ -128,7 +138,7 @@
                   href="https://www.facebook.com/"
                   rel="noopener"
                   target="_blank"
-                  title="(opens in a new tab)"
+                  title="Facebook (opens in a new tab)"
                   class="material-icons mdc-top-app-bar__action-item--unbounded mdc-icon-button material-icons-fa"
                   aria-label=""
                 >
@@ -142,7 +152,7 @@
                   href="https://twitter.com/"
                   rel="noopener"
                   target="_blank"
-                  title="(opens in a new tab)"
+                  title="Twitter (opens in a new tab)"
                   class="material-icons mdc-top-app-bar__action-item--unbounded mdc-icon-button material-icons-fa"
                   aria-label=""
                 >
@@ -156,7 +166,7 @@
                   href="https://www.youtube.com/"
                   rel="noopener"
                   target="_blank"
-                  title="(opens in a new tab)"
+                  title="YouTube (opens in a new tab)"
                   class="material-icons mdc-top-app-bar__action-item--unbounded mdc-icon-button material-icons-fa"
                   aria-label=""
                 >
@@ -170,7 +180,7 @@
                   href="https://www.linkedin.com/"
                   rel="noopener"
                   target="_blank"
-                  title="(opens in a new tab)"
+                  title="LinkedIn (opens in a new tab)"
                   class="material-icons mdc-top-app-bar__action-item--unbounded mdc-icon-button material-icons-fa"
                   aria-label=""
                 >
@@ -184,7 +194,7 @@
                   href="https://www.instagram.com/"
                   rel="noopener"
                   target="_blank"
-                  title="(opens in a new tab)"
+                  title="Instagram (opens in a new tab)"
                   class="material-icons mdc-top-app-bar__action-item--unbounded mdc-icon-button material-icons-fa"
                   aria-label=""
                 >
@@ -526,46 +536,52 @@
         id="main-content"
       >
         <div class="container-fluid mw-screen hero-banner">
-          <div class="mdc-layout-grid p-0 bg-secondary bg-gradient text-white">
-            <div class="mdc-layout-grid__inner gg-0">
-              <div
-                class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-8-desktop d-flex order-2 order-md-1"
-              >
-                <div class="align-self-center p-3 p-sm-5">
-                  <h1 class="mdc-typography mdc-typography--headline4">
-                    Lorem ipsum dolor sit amet consectetur adipiscing
-                  </h1>
-                  <h2 class="mdc-typography mdc-typography--headline6">
-                    Suspendisse rutrum sodales tincidunt. Vivamus non
-                    scelerisque sem. Donec vel augue sed libero mollis suscipit
-                    id at quam. Phasellus maximus tincidunt vestibulum.
-                    Suspendisse posuere elit vitae mauris.
-                  </h2>
+          <div
+            class="d-flex justify-content-end bg-secondary bg-gradient text-white"
+          >
+            <!--<div class="container p-0 m-0">-->
+            <div class="mdc-layout-grid p-0">
+              <div class="mdc-layout-grid__inner gg-0">
+                <div
+                  class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-8-desktop d-flex order-2 order-md-1"
+                >
+                  <div class="align-self-center p-3 p-sm-5">
+                    <h1 class="mdc-typography mdc-typography--headline4">
+                      Lorem ipsum dolor sit amet consectetur adipiscing
+                    </h1>
+                    <h2 class="mdc-typography mdc-typography--headline6">
+                      Suspendisse rutrum sodales tincidunt. Vivamus non
+                      scelerisque sem. Donec vel augue sed libero mollis
+                      suscipit id at quam. Phasellus maximus tincidunt
+                      vestibulum. Suspendisse posuere elit vitae mauris.
+                    </h2>
+                  </div>
+                </div>
+                <div
+                  class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-4-desktop order-1 order-md-2 d-flex justify-content-end"
+                >
+                  <picture>
+                    <source
+                      srcset="https://via.placeholder.com/400x400"
+                      media="(min-width: 840px)"
+                      class="d-block img-fluid"
+                    />
+                    <source
+                      srcset="https://via.placeholder.com/823x353"
+                      media="(min-width: 600px)"
+                      class="d-block img-fluid"
+                    />
+                    <img
+                      src="https://via.placeholder.com/570x244"
+                      class="d-block img-fluid"
+                      alt="Placeholder image"
+                    />
+                    <!-- http://lorempixel.com/g/400/400/abstract/7/400%20x%20400/ -->
+                  </picture>
                 </div>
               </div>
-              <div
-                class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-4-desktop order-1 order-md-2 d-flex justify-content-end"
-              >
-                <picture>
-                  <source
-                    srcset="https://via.placeholder.com/400x400"
-                    media="(min-width: 840px)"
-                    class="d-block img-fluid"
-                  />
-                  <source
-                    srcset="https://via.placeholder.com/823x353"
-                    media="(min-width: 600px)"
-                    class="d-block img-fluid"
-                  />
-                  <img
-                    src="https://via.placeholder.com/570x244"
-                    class="d-block img-fluid"
-                    alt="Placeholder image"
-                  />
-                  <!-- http://lorempixel.com/g/400/400/abstract/7/400%20x%20400/ -->
-                </picture>
-              </div>
             </div>
+            <!--</div>-->
           </div>
         </div>
         <div class="container-xxl">
