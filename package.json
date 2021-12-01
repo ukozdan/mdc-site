@@ -1,7 +1,7 @@
 {
-  "name": "mdc-site",
+  "name": "mdc-site-vertical-drawer",
   "version": "1.0.0",
-  "description": "Importing in all MDC packages individually, rather than the single library. ",
+  "description": "",
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
